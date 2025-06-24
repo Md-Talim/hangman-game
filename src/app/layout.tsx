@@ -4,7 +4,6 @@ import "./globals.css";
 
 const mouseMemoirs = Mouse_Memoirs({
   weight: ["400"],
-  variable: "--font-primary",
   subsets: ["latin"],
 });
 
@@ -20,7 +19,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${mouseMemoirs.variable} antialiased`}>{children}</body>
+      <body className={`${mouseMemoirs.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 };
