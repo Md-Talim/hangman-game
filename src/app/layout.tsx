@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { Metadata } from "next";
 import { Mouse_Memoirs } from "next/font/google";
 import "./globals.css";
@@ -19,7 +20,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${mouseMemoirs.className} antialiased`}>
+      <body
+        className={clsx("min-h-screen antialiased", mouseMemoirs.className)}
+      >
         {children}
       </body>
     </html>
