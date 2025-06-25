@@ -34,7 +34,7 @@ body {
 }
 
 @utility heading-xl {
-  @apply text-[136px] leading-[120%] -tracking-[0.5%];
+  @apply text-[48px] leading-[120%] -tracking-[0.5%] md:text-[104px] lg:text-[136px];
 }
 
 @utility heading-l {
@@ -42,7 +42,7 @@ body {
 }
 
 @utility heading-m {
-  @apply text-[48px] leading-[120%] tracking-[5%] uppercase;
+  @apply text-2xl leading-[120%] tracking-[5%] uppercase md:text-[40px] lg:text-[48px];
 }
 
 @utility heading-s {
@@ -50,7 +50,7 @@ body {
 }
 
 @utility body {
-  @apply text-[26px] leading-[120%] tracking-[5%];
+  @apply text-[16px] leading-[120%] tracking-[5%] md:text-[20px] lg:text-[26px];
 }
 
 @utility blue-white-gradient {
@@ -71,6 +71,10 @@ body {
     inset 0 6px 0px 8px #2463ff;
 }
 
+@utility icon-shadow {
+  box-shadow: inset 0 -6px 0px 7px rgba(157, 45, 245, 0.25);
+}
+
 @utility navy-blue-shadow {
   box-shadow:
     inset 0 -2px 0px 3px #140e66,
@@ -79,6 +83,16 @@ body {
 
 @utility center {
   @apply flex items-center justify-center;
+}
+
+@utility button-icon {
+  background: linear-gradient(to bottom, #fe71fe, #7199ff);
+
+  @variant hover {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+      linear-gradient(to bottom, #fe71fe, #7199ff);
+  }
 }
 
 @utility button-primary {
@@ -92,15 +106,8 @@ body {
 }
 
 @utility button-secondary {
-  @apply heading-s center rounded-full px-16 py-3;
+  @apply heading-s center button-icon rounded-full px-16 py-3;
   box-shadow:
     inset 0 -4px 0 5px #243041,
     inset 0 -12px 0 11px #9d2df5;
-  background: linear-gradient(to bottom, #fe71fe, #7199ff);
-
-  @variant hover {
-    background:
-      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
-      linear-gradient(to bottom, #fe71fe, #7199ff);
-  }
 }
