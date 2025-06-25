@@ -20,9 +20,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body
-        className={clsx("min-h-screen antialiased", mouseMemoirs.className)}
-      >
+      <body className={clsx("antialiased", mouseMemoirs.className)}>
         {children}
       </body>
     </html>

@@ -79,6 +79,12 @@ body {
   box-shadow:
     inset 0 -2px 0px 3px #140e66,
     inset 0 1px 0px 6px #3c74ff;
+
+  @variant hover {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+      var(--blue);
+  }
 }
 
 @utility center {
@@ -97,12 +103,6 @@ body {
 
 @utility button-primary {
   @apply heading-s bg-blue navy-blue-shadow center rounded-full px-16 py-3;
-
-  @variant hover {
-    background:
-      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
-      var(--blue);
-  }
 }
 
 @utility button-secondary {

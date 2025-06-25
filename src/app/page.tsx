@@ -19,7 +19,7 @@ const HomePage = () => {
           </CardTitle>
           <CardContent className="gap-[57px]">
             <Link
-              href="/game"
+              href="/select-category"
               className="button-secondary h-40 w-40 p-0"
               aria-label="Play game"
             >
