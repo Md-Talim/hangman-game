@@ -15,7 +15,9 @@
 body {
   background: var(--dark-navy);
   color: var(--white);
-  background-image: url("/background-desktop.svg");
+  background-image:
+    linear-gradient(to bottom, rgba(26, 4, 58, 0.7) 0%, rgba(21, 18, 120, 0.7) 70%, rgba(43, 22, 119, 0.7) 100%),
+    url("/background-desktop.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
