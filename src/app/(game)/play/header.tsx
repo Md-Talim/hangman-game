@@ -1,6 +1,26 @@
+import clsx from "clsx";
 import Image from "next/image";
 
-const Header = ({ category }: { category: string }) => {
+interface HeaderProps {
+  category: string;
+  wrongGuesses: number;
+}
+
+const Header = ({ category, wrongGuesses }: HeaderProps) => {
+  const MAX_ALLOWED_GUESSES = 8;
+  const remainingLives = Math.max(0, MAX_ALLOWED_GUESSES - wrongGuesses);
+  const healthPercentage = (remainingLives / MAX_ALLOWED_GUESSES) * 100;
+
+  const healthBarBackground = clsx(
+    healthPercentage > 60
+      ? "bg-dark-navy"
+      : healthPercentage > 30
+        ? "bg-yellow-500"
+        : healthPercentage > 0
+          ? "bg-red-500"
+          : "bg-gray-300",
+  );
+
   return (
     <header className="mt-[46px] flex items-center justify-between px-6">
       <div className="flex items-center gap-4 md:gap-6 lg:gap-[57px]">
@@ -21,9 +41,19 @@ const Header = ({ category }: { category: string }) => {
       </div>
 
       <div className="flex items-center gap-4 md:gap-10">
-        {/* Remaining lives indicator */}
+        {/* Health Bar */}
         <div className="w-14 rounded-full bg-white p-1 md:w-40 md:px-[11px] md:py-[9px]">
-          <div className="bg-dark-navy h-2 w-full rounded-full md:h-[13px]" />
+          <div
+            id="health-bar"
+            className={clsx(
+              "h-2 rounded-full md:h-[13px]",
+              healthBarBackground,
+            )}
+            style={{
+              width: `${healthPercentage}%`,
+              minWidth: healthPercentage > 0 ? "8px" : "0px",
+            }}
+          />
         </div>
         <Image
           src="/icon-heart.svg"

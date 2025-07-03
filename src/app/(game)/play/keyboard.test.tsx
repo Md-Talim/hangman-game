@@ -10,7 +10,8 @@ describe("Keyboard", () => {
   });
 
   it("renders all 26 letters alphabet buttons", () => {
-    render(<Keyboard guessedLetters={[]} setGuessedLetters={() => {}} />);
+    const mockOnUserGuess = vi.fn();
+    render(<Keyboard guessedLetters={[]} onUserGuess={mockOnUserGuess} />);
 
     const buttons = screen.getAllByRole("button");
     expect(buttons).toHaveLength(26);
@@ -19,42 +20,41 @@ describe("Keyboard", () => {
   });
 
   it("disables guessed letter buttons", () => {
+    const mockOnUserGuess = vi.fn();
     render(
       <Keyboard
         guessedLetters={["A", "C", "E"]}
-        setGuessedLetters={() => {}}
+        onUserGuess={mockOnUserGuess}
       />,
     );
 
     expect(screen.getByRole("button", { name: "A" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "C" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "E" })).toBeDisabled();
   });
 
-  it("calls setGuessedLetters when a letter is clicked", async () => {
+  it("calls onUseGuess when a letter is clicked", async () => {
     const user = userEvent.setup();
-    const setGuessedLetters = vi.fn();
+    const mockOnUserGuess = vi.fn();
 
-    render(
-      <Keyboard guessedLetters={[]} setGuessedLetters={setGuessedLetters} />,
-    );
+    render(<Keyboard guessedLetters={[]} onUserGuess={mockOnUserGuess} />);
     const button = screen.getByRole("button", { name: "H" });
 
     await user.click(button);
 
-    expect(setGuessedLetters).toHaveBeenCalledTimes(1);
-    expect(setGuessedLetters).toHaveBeenCalledWith(expect.any(Function));
+    expect(mockOnUserGuess).toHaveBeenCalledTimes(1);
+    expect(mockOnUserGuess).toHaveBeenCalledWith(expect.any(Object), "H");
   });
 
   it("does not call setGuessedLetters for already guessed letters", async () => {
     const user = userEvent.setup();
-    const setGuessedLetters = vi.fn();
+    const mockOnUserGuess = vi.fn();
 
-    render(
-      <Keyboard guessedLetters={["H"]} setGuessedLetters={setGuessedLetters} />,
-    );
+    render(<Keyboard guessedLetters={["H"]} onUserGuess={mockOnUserGuess} />);
     const button = screen.getByRole("button", { name: "H" });
 
     await user.click(button);
 
-    expect(setGuessedLetters).not.toHaveBeenCalled();
+    expect(mockOnUserGuess).not.toHaveBeenCalled();
   });
 });
