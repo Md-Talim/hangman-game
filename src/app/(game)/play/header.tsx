@@ -4,9 +4,10 @@ import Image from "next/image";
 interface HeaderProps {
   category: string;
   wrongGuesses: number;
+  onMenuClick: () => void;
 }
 
-const Header = ({ category, wrongGuesses }: HeaderProps) => {
+const Header = ({ category, wrongGuesses, onMenuClick }: HeaderProps) => {
   const MAX_ALLOWED_GUESSES = 8;
   const remainingLives = Math.max(0, MAX_ALLOWED_GUESSES - wrongGuesses);
   const healthPercentage = (remainingLives / MAX_ALLOWED_GUESSES) * 100;
@@ -25,6 +26,7 @@ const Header = ({ category, wrongGuesses }: HeaderProps) => {
     <header className="mt-[46px] flex items-center justify-between px-6">
       <div className="flex items-center gap-4 md:gap-6 lg:gap-[57px]">
         <button
+          onClick={onMenuClick}
           className="button-icon-sm aspect-square w-10 rounded-full p-0 md:w-16 lg:w-24"
           aria-label="Open menu"
         >

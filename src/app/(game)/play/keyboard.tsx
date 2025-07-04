@@ -26,12 +26,12 @@ const Keyboard = ({ guessedLetters, onUserGuess }: KeyboardProps) => {
               type="button"
               disabled={guessedLetters.includes(letter)}
               className={clsx(
-                "center text-dark-navy h-14 w-[28px] rounded-lg bg-white md:h-[84px] md:w-[64px] md:rounded-3xl lg:h-[84px] lg:w-[109px]",
+                "heading-m center text-dark-navy h-14 w-[28px] rounded-lg bg-white md:h-[84px] md:w-[64px] md:rounded-3xl lg:h-[84px] lg:w-[109px]",
                 "hover:bg-blue disbaled:text-dark-navy/25 hover:cursor-pointer hover:text-white disabled:pointer-events-none disabled:bg-white/25",
               )}
               onClick={(e) => onUserGuess(e, letter)}
             >
-              <span className="heading-m">{letter}</span>
+              {letter}
             </button>
           ))}
         </div>
