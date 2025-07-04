@@ -1,13 +1,7 @@
-import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
 import HowToPlayPage from "./page";
 
 describe("How to Play Page", () => {
-  afterEach(() => {
-    cleanup();
-  });
-
   it("renders the page header", () => {
     render(<HowToPlayPage />);
     expect(

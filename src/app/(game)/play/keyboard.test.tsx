@@ -1,14 +1,8 @@
-import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it, vi } from "vitest";
 import Keyboard from "./keyboard";
 
 describe("Keyboard", () => {
-  afterEach(() => {
-    cleanup();
-  });
-
   it("renders all 26 letters alphabet buttons", () => {
     const mockOnUserGuess = vi.fn();
     render(<Keyboard guessedLetters={[]} onUserGuess={mockOnUserGuess} />);

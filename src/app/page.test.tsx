@@ -1,27 +1,7 @@
-import "@testing-library/jest-dom/vitest";
-import { cleanup, render, screen, within } from "@testing-library/react";
-import { describe } from "node:test";
-import React from "react";
-import { afterEach, expect, it, vi } from "vitest";
+import { render, screen, within } from "@testing-library/react";
 import HomePage from "./page";
 
-vi.mock("next/image", () => ({
-  default: (props: React.ComponentProps<"img">) => <img {...props} />,
-}));
-
-vi.mock("next/link", () => ({
-  default: ({ children, href, ...props }: React.ComponentProps<"a">) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  ),
-}));
-
 describe("Home Page", () => {
-  afterEach(() => {
-    cleanup();
-  });
-
   it("renders without crashing", () => {
     render(<HomePage />);
     expect(screen.getByRole("main")).toBeInTheDocument();
