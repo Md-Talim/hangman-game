@@ -25,7 +25,7 @@ const Header = ({ category, wrongGuesses }: HeaderProps) => {
     <header className="mt-[46px] flex items-center justify-between px-6">
       <div className="flex items-center gap-4 md:gap-6 lg:gap-[57px]">
         <button
-          className="center button-icon aspect-square w-10 rounded-full p-0 md:w-16 lg:w-24"
+          className="button-icon-sm aspect-square w-10 rounded-full p-0 md:w-16 lg:w-24"
           aria-label="Open menu"
         >
           <Image

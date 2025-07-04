@@ -20,7 +20,7 @@ const HomePage = () => {
           <CardContent className="gap-[57px]">
             <Link
               href="/select-category"
-              className="button-secondary h-40 w-40 p-0"
+              className="button-icon-lg p-0"
               aria-label="Play game"
             >
               <Image

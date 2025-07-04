@@ -93,8 +93,15 @@ body {
   @apply flex items-center justify-center;
 }
 
-@utility button-icon {
+@utility button-primary {
+  @apply heading-s bg-blue navy-blue-shadow center rounded-full px-16 py-3;
+}
+
+
+@utility button-icon-sm {
+  @apply center rounded-full;
   background: linear-gradient(to bottom, #fe71fe, #7199ff);
+  box-shadow: inset 0 -6px 0 7px rgba(157,45,245,0.25);
 
   @variant hover {
     background:
@@ -103,13 +110,30 @@ body {
   }
 }
 
-@utility button-primary {
-  @apply heading-s bg-blue navy-blue-shadow center rounded-full px-16 py-3;
-}
-
-@utility button-secondary {
-  @apply heading-s center button-icon rounded-full px-16 py-3;
+@utility button-icon-lg {
+  @apply heading-s center rounded-full h-40 w-40;
+  background: linear-gradient(to bottom, #fe71fe, #7199ff);
   box-shadow:
     inset 0 -4px 0 5px #243041,
     inset 0 -12px 0 11px #9d2df5;
+
+  @variant hover {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+      linear-gradient(to bottom, #fe71fe, #7199ff);
+  }
+}
+
+@utility button-secondary {
+  @apply heading-s center rounded-full px-16 py-3;
+  background: linear-gradient(to bottom, #fe71fe, #7199ff);
+  box-shadow:
+    inset 0 -2px 0 3px #140E66,
+    inset 0 1px 0 6px #C642FB;
+
+  @variant hover {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)),
+      linear-gradient(to bottom, #fe71fe, #7199ff);
+  }
 }

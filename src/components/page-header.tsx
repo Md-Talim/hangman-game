@@ -5,7 +5,7 @@ const PageHeader = ({ title }: { title: string }) => (
   <header className="mt-8 flex items-center justify-between px-8 md:mt-[60px] md:px-12 lg:mt-20">
     <Link
       href="/"
-      className="center button-icon aspect-square w-10 rounded-full p-0 md:w-16 lg:w-24"
+      className="center button-icon-sm aspect-square w-10 rounded-full p-0 md:w-16 lg:w-24"
       aria-label="Go back"
     >
       <Image
