@@ -6,5 +6,5 @@ export function pickRandomWordFromCategory(category: Category) {
   const categoryWords = words.categories[category];
   if (!categoryWords || categoryWords.length === 0) return null;
   const randomIndex = Math.floor(Math.random() * categoryWords.length);
-  return categoryWords[randomIndex].name.toUpperCase();
+  return categoryWords[randomIndex].toUpperCase();
 }
