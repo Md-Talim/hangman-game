@@ -1,5 +1,5 @@
 {
-  "name": "hangman-game",
+  "name": "wordhunt-game",
   "version": "0.1.0",
   "private": true,
   "scripts": {

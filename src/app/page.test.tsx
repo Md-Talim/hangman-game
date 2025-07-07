@@ -9,7 +9,7 @@ describe("Home Page", () => {
 
   it("renders the logo image", () => {
     render(<HomePage />);
-    const logo = screen.getByAltText(/hangman game logo/i);
+    const logo = screen.getByAltText(/wordhunt game logo/i);
     expect(logo).toBeInTheDocument();
   });
 

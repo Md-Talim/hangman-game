@@ -10,7 +10,7 @@ const HomePage = () => {
           <CardTitle>
             <Image
               src="/logo.svg"
-              alt="Hangman game logo"
+              alt="WordHunt game logo"
               width={263}
               height={130}
               className="h-auto md:w-[374px]"

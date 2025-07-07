@@ -9,8 +9,8 @@ const mouseMemoirs = Mouse_Memoirs({
 });
 
 export const metadata: Metadata = {
-  title: "Hangman Game",
-  description: "Play the classic hangman word game.",
+  title: "WordHunt Game",
+  description: "Can you guess the word before it's too late?",
 };
 
 const RootLayout = ({

@@ -1,4 +1,4 @@
-# Hangman Game - Interactive Word Guessing Game
+# WordHunt Game - Word Guessing Game
 
 An interactive word-guessing game where players reveal hidden words by guessing letters across six different categories: Movies, TV Shows, Countries, Capital Cities, Animals, and Sports. The game features a visual health system that tracks remaining attempts through a dynamic color-coded progress bar.
 
@@ -241,7 +241,7 @@ _Note: Physical keyboard navigation (pressing 'A' key to guess 'A') is planned f
 
 ```bash
 # Clone the repository
-git clone https://github.com/Md-Talim/hangman-game.git
+git clone https://github.com/Md-Talim/wordhunt-game.git
 
 # Install dependencies
 npm install
