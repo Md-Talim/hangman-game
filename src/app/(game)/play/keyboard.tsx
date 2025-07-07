@@ -1,9 +1,13 @@
 "use client";
 import clsx from "clsx";
+import { useEffect } from "react";
 
 interface KeyboardProps {
   guessedLetters: string[];
-  onUserGuess: (e: React.MouseEvent<HTMLButtonElement>, letter: string) => void;
+  onUserGuess: (
+    e: React.MouseEvent<HTMLButtonElement> | KeyboardEvent,
+    letter: string,
+  ) => void;
 }
 
 const Keyboard = ({ guessedLetters, onUserGuess }: KeyboardProps) => {
@@ -12,6 +16,26 @@ const Keyboard = ({ guessedLetters, onUserGuess }: KeyboardProps) => {
     ["J", "K", "L", "M", "N", "O", "P", "Q", "R"],
     ["S", "T", "U", "V", "W", "X", "Y", "Z"],
   ];
+
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      const letter = event.key.toUpperCase();
+
+      // Check if it's a single letter character only
+      // > 1 length means it's not a valid letter key, "Enter", "Tab", "Shift", etc.
+      if (letter.length === 1 && letter >= "A" && letter <= "Z") {
+        if (!guessedLetters.includes(letter)) {
+          onUserGuess(event, letter);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyPress);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyPress);
+    };
+  }, [guessedLetters, onUserGuess]);
 
   return (
     <div className="grid justify-items-center gap-6">

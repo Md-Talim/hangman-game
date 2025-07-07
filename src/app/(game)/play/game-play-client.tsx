@@ -43,7 +43,7 @@ const GamePlayClient = ({ category, targetWord }: GamePlayClientProps) => {
   }, [guessedLetters, wrongGuesses, gameState]);
 
   const handleUserGuess = (
-    e: React.MouseEvent<HTMLButtonElement>,
+    e: React.MouseEvent<HTMLButtonElement> | KeyboardEvent,
     letter: string,
   ) => {
     e.preventDefault();
