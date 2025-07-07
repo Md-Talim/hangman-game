@@ -6,19 +6,19 @@
       "Ratatouille", "Luca", "Minions", "Annie", "Tarzan", "Bambi", "Megamind", "Spirit", "Pinocchio", "Elemental"
     ],
     "Countries": [
-      "Canada", "France", "Brazil", "Japan", "Spain", "China", "Italy", "India", "Egypt", "Mexico",
-      "Kenya", "Russia", "Peru", "Greece", "Norway", "Sweden", "Poland", "Germany", "Turkey", "Thailand",
-      "Morocco", "Nepal", "Finland", "Austria", "Nigeria", "Belgium", "Ireland", "Croatia", "Pakistan", "Denmark"
+      "Canada", "France", "Brazil", "Japan", "Spain", "China", "Italy", "India", "Egypt", "Mexico", "New Zealand",
+      "Kenya", "Russia", "Peru", "Greece", "Norway", "Sweden", "Poland", "Germany", "Turkey", "Thailand", "Africa",
+      "Morocco", "Nepal", "Finland", "Austria", "Nigeria", "Belgium", "Ireland", "Croatia", "Pakistan", "Denmark", "America", "Britian"
     ],
     "Animals": [
       "Tiger", "Lion", "Zebra", "Panda", "Koala", "Giraffe", "Dolphin", "Penguin", "Rabbit", "Horse",
       "Monkey", "Turtle", "Fox", "Owl", "Falcon", "Cheetah", "Parrot", "Eagle", "Whale", "Otter",
-      "Donkey", "Jaguar", "Frog", "Shark", "Lemur", "Camel", "Mole", "Raccoon", "Bison", "Snail"
+      "Donkey", "Jaguar", "Frog", "Shark", "Lemur", "Camel", "Mole", "Raccoon", "Bison", "Snail", "Bear"
     ],
     "Sports": [
-      "Soccer", "Tennis", "Cricket", "Boxing", "Hockey", "Rugby", "Baseball", "Cycling", "Archery", "Rowing",
-      "Skating", "Golf", "Dancing", "Fencing", "Wrestling", "Surfing", "Running", "Judo", "Skiing", "Badminton",
-      "Diving", "Karate", "Climbing", "Canoeing", "Sailing", "Lacrosse", "Curling", "Walking", "Bowling", "Jumping"
+      "Soccer", "Tennis", "Cricket", "Boxing", "Hockey", "Rugby", "Baseball", "Cycling", "Archery", "Rowing", "Football",
+      "Skating", "Golf", "Dancing", "Fencing", "Wrestling", "Surfing", "Running", "Judo", "Skiing", "Badminton", "Karate",
+      "Diving", "Karate", "Climbing", "Canoeing", "Sailing", "Lacrosse", "Curling", "Walking", "Bowling", "Jumping", "Ping Pong"
     ],
     "Capital Cities": [
       "Tokyo", "Paris", "London", "Berlin", "Ottawa", "Canberra", "Moscow", "Beijing", "Vienna", "Seoul",
@@ -28,7 +28,7 @@
     "TV Shows": [
       "Friends", "Sherlock", "Fargo", "Dexter", "Lost", "Bluey", "Wednesday", "Miraculous", "Seinfeld", "Naruto",
       "Lucifer", "Bleach", "Gravity", "Arthur", "Pokemon", "Gumball", "Bakugan", "iCarly", "Victorious", "Recess",
-      "Clarence", "Peppa", "Avatar", "Danny", "Ben10", "Jessie", "Drake", "Liv", "Austin", "Charmed"
+      "Clarence", "Peppa", "Avatar", "Danny", "Jessie", "Drake", "Liv", "Austin", "Charmed"
     ]
   }
 }
