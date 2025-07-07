@@ -31,6 +31,7 @@ const GamePlayClient = ({ category, targetWord }: GamePlayClientProps) => {
   };
 
   const isGameLost = wrongGuesses >= MAX_WRONG_GUESSES;
+  const isMenuOpen = gameState !== "playing";
 
   useEffect(() => {
     if (gameState === "playing") {
@@ -41,6 +42,17 @@ const GamePlayClient = ({ category, targetWord }: GamePlayClientProps) => {
       }
     }
   }, [guessedLetters, wrongGuesses, gameState]);
+
+  useEffect(() => {
+    const handleEnterKey = (e: KeyboardEvent) => {
+      if (e.key === "Enter" && isMenuOpen) {
+        e.preventDefault();
+        getMenuAction()();
+      }
+    };
+
+    window.addEventListener("keydown", handleEnterKey);
+  }, [isMenuOpen, gameState]);
 
   const handleUserGuess = (
     e: React.MouseEvent<HTMLButtonElement> | KeyboardEvent,
@@ -99,8 +111,6 @@ const GamePlayClient = ({ category, targetWord }: GamePlayClientProps) => {
         return handleMenuToggle;
     }
   };
-
-  const isMenuOpen = gameState !== "playing";
 
   return (
     <div className="mx-auto flex min-h-screen max-w-[1216px] flex-col">
