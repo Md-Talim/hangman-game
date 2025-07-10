@@ -49,6 +49,10 @@ const GamePlayClient = ({ category, targetWord }: GamePlayClientProps) => {
         e.preventDefault();
         getMenuAction()();
       }
+
+      if (e.key == "Escape" && gameState === "paused") {
+        setGameState("playing");
+      }
     };
 
     window.addEventListener("keydown", handleEnterKey);
